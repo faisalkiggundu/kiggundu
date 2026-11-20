@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISBAT University | Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        header, footer {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+        }
+
+        form {
+            max-width: 700px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+        }
+
+        fieldset {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 2px solid navy;
+        }
+
+        label {
+            display: inline-block;
+            margin: 8px 0;
+        }
+
+        input, select {
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 95%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: navy;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>ISBAT UNIVERSITY</h1>
+    <p>Student Registration Portal</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#programmes">Programmes</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+<form action="#" method="post">
+
+    <h2>Student Registration Form</h2>
+
+    <fieldset>
+        <legend>Personal Details</legend>
+
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="studentid">Student ID:</label><br>
+        <input type="text" id="studentid" name="studentid"
+        pattern="[A-Z]{2}[0-9]{4}" required
+        title="Enter two capital letters followed by four digits"><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"
+        pattern="07[0-9]{8}" placeholder="07XXXXXXXX" required><br>
+
+        <label>Gender:</label><br>
+
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br>
+
+        <label for="nationality">Nationality:</label><br>
+        <select id="nationality" name="nationality" required>
+            <option value="">Select Nationality</option>
+            <option>Uganda</option>
+            <option>Kenya</option>
+            <option>Tanzania</option>
+            <option>Rwanda</option>
+            <option>South Sudan</option>
+        </select><br>
+
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required>
+    </fieldset>
+
+    <fieldset id="programmes">
+        <legend>Programme Details</legend>
+
+        <label for="programme">Programme of Study:</label><br>
+
+        <select id="programme" name="programme" required>
+            <option value="">Select Programme</option>
+            <option>Bachelor of Information Technology</option>
+            <option>Bachelor of Computer Science</option>
+            <option>Bachelor of Business Administration</option>
+            <option>Bachelor of Information Systems</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Course Units</legend>
+
+        <p>Select your first semester course units:</p>
+
+        <input type="checkbox" id="html" name="units[]" value="HTML">
+        <label for="html">HTML and CSS</label><br>
+
+        <input type="checkbox" id="programming" name="units[]" value="Programming">
+        <label for="programming">Programming</label><br>
+
+        <input type="checkbox" id="database" name="units[]" value="Database">
+        <label for="database">Database Management</label><br>
+
+        <input type="checkbox" id="networking" name="units[]" value="Networking">
+        <label for="networking">Computer Networking</label><br>
+
+        <input type="checkbox" id="linux" name="units[]" value="Linux">
+        <label for="linux">Linux Operating Systems</label><br>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+</form>
+</main>
+
+<footer id="contact">
+    <p>&copy; 2026 ISBAT University</p>
+    <p>Registration Number: 012250133</p>
+</footer>
+
+</body>
+</html>
